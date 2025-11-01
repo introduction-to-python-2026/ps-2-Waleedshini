@@ -19,9 +19,8 @@ def find_mean(num1, num2, num3):
 
 def find_mean_std(num1, num2, num3):
     mean = find_mean(num1, num2, num3)
-    mean = find_mean(num1, num2, num3)
     element = (num1,num2,num3)
     n_o_e = len(element)
-    phase1 = ((((num1 - mean)**2) + ((num2 - mean)**2) + ((num3 - mean)**2))/n_o_e)**0.5
+    phase1 = ((((num1 - mean)**2) + ((num2 - mean)**2) + ((num3 - mean)**2))/(n_o_e - 1))**0.5
     return (phase1,mean)
 
