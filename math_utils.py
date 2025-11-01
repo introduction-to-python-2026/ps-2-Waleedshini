@@ -14,7 +14,7 @@ def find_mean(num1, num2, num3):
     elements = (num1,num2,num3)
     phase1 = (num1+num2+num3)
     phase2 = len(elements)
-    result= (phase1/phase2)
+    result = (phase1/phase2)
     return result
 
 def find_mean_std(num1, num2, num3):
