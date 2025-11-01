@@ -18,9 +18,18 @@ def find_mean(num1, num2, num3):
     return result
 
 def find_mean_std(num1, num2, num3):
-    mean = find_mean(num1, num2, num3) 
-    element = (num1,num2,num3)
-    n_o_e = len(element)
-    phase1 = ((((num1 - mean)**2) + ((num2 - mean)**2) + ((num3 - mean)**2))/n_o_e)**0.5
-    return (phase1,mean)
+    # Calculate the mean once
+    mean = find_mean(num1, num2, num3)
+    
+    # Define n directly (n=3)
+    n = 3 
+    
+    # Calculate the sum of squared differences (numerator)
+    sum_sq_diff = ((num1 - mean)**2) + ((num2 - mean)**2) + ((num3 - mean)**2)
+    
+    # Calculate the Standard Deviation (std_dev)
+    std_dev = (sum_sq_diff / n)**0.5
+    
+    # Return both std_dev and mean
+    return (std_dev, mean)
 
